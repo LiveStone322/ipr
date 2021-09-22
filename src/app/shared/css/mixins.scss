@@ -1,0 +1,5 @@
+@use './constants.scss' as c;
+
+@mixin shadow($color: c.$color-black) {
+  box-shadow: 0 22px 70px 4px rgba($color, 0.6);
+}

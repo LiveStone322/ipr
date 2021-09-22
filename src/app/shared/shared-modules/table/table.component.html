@@ -1,0 +1,8 @@
+<app-search-bar (filterChanged)="onFilterChanged($event)"></app-search-bar>
+<button (click)="onSortChanged(sortingOptions.Asc)">Asc</button>
+<button (click)="onSortChanged(sortingOptions.Desc)">Desc</button>
+<ul>
+  <li *ngFor="let item of shownItems">
+    <a [routerLink]="['./1']">{{ item }}</a>
+  </li>
+</ul>
