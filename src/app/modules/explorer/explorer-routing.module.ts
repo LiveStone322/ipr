@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { appLinks } from 'src/app/shared/models/app-links.model';
+import { AppModuleIds } from 'src/app/shared/models/app-modules.model';
 import { ExplorerComponent } from './explorer.component';
 
 const routes: Routes = [
@@ -11,32 +11,32 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: appLinks.movies.link,
+        redirectTo: AppModuleIds.Movies,
       },
       {
-        path: appLinks.movies.link,
+        path: AppModuleIds.Movies,
         loadChildren: () => import('./modules/movies/movies.module').then((m) => m.MoviesModule),
       },
       {
-        path: appLinks.characters.link,
+        path: AppModuleIds.Characters,
         loadChildren: () =>
           import('./modules/characters/characters.module').then((m) => m.CharactersModule),
       },
       {
-        path: appLinks.ships.link,
+        path: AppModuleIds.Ships,
         loadChildren: () => import('./modules/ships/ships.module').then((m) => m.ShipsModule),
       },
       {
-        path: appLinks.planets.link,
+        path: AppModuleIds.Planets,
         loadChildren: () => import('./modules/planets/planets.module').then((m) => m.PlanetsModule),
       },
       {
-        path: appLinks.race.link,
+        path: AppModuleIds.Race,
         loadChildren: () => import('./modules/race/race.module').then((m) => m.RaceModule),
       },
       {
         path: '**',
-        redirectTo: appLinks.movies.link,
+        redirectTo: AppModuleIds.Movies,
       },
     ],
   },

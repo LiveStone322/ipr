@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CharactersRoutingModule } from './characters-routing.module';
 import { CharactersComponent } from './characters.component';
-import { TableModule } from '../../../../shared/shared-modules/table/table.module';
+import { TableModule } from '../../../../shared/modules/table/table.module';
 
 @NgModule({
   declarations: [CharactersComponent],

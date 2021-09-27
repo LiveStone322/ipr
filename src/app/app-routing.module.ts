@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoreComponent } from './components/core/core.component';
-import { appLinks } from './shared/models/app-links.model';
+import { AppModuleIds } from './shared/models/app-modules.model';
 
 const routes: Routes = [
   {
@@ -9,16 +9,19 @@ const routes: Routes = [
     component: CoreComponent,
     children: [
       {
-        path: appLinks.explorer.link,
+        path: AppModuleIds.Explorer,
         loadChildren: () =>
           import('./modules/explorer/explorer.module').then((m) => m.ExplorerModule),
       },
     ],
   },
-  { path: 'crew', loadChildren: () => import('./modules/crew/crew.module').then(m => m.CrewModule) },
+  {
+    path: 'crew',
+    loadChildren: () => import('./modules/crew/crew.module').then((m) => m.CrewModule),
+  },
   {
     path: '**',
-    redirectTo: appLinks.explorer.link,
+    redirectTo: AppModuleIds.Explorer,
   },
 ];
 

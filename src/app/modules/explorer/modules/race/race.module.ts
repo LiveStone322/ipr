@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RaceRoutingModule } from './race-routing.module';
 import { RaceComponent } from './race.component';
-import { TableModule } from '../../../../shared/shared-modules/table/table.module';
+import { TableModule } from '../../../../shared/modules/table/table.module';
 
 @NgModule({
   declarations: [RaceComponent],
