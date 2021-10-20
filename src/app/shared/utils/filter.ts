@@ -1,3 +1,5 @@
-export function filterItems(items: any[], filter: string): any[] {
-  return items.filter((item) => item.includes(filter));
+import { TableObject } from '../models/table.model';
+
+export function filterItems(items: TableObject[], filter: string): any[] {
+  return items.filter((item) => item.name.includes(filter));
 }

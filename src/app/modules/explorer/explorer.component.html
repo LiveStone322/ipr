@@ -1,10 +1,15 @@
-<div class="tabs">
-  <button [routerLink]="['movies']">фильмы</button>
-  <button [routerLink]="['characters']">персонажи</button>
-  <button [routerLink]="['ships']">звездолеты</button>
-  <button [routerLink]="['planets']">планеты</button>
-  <button [routerLink]="['race']">расы</button>
-</div>
-<div class="tabs">
-  <router-outlet></router-outlet>
-</div>
+<app-card>
+  <app-table [useControls]="false" [cardId]="appModuleIdsEnum.Movies"></app-table>
+</app-card>
+<app-card>
+  <app-table [useControls]="true" [cardId]="appModuleIdsEnum.Characters"></app-table>
+</app-card>
+<app-card>
+  <app-table [useControls]="true" [cardId]="appModuleIdsEnum.Ships"></app-table>
+</app-card>
+<app-card>
+  <app-table [useControls]="false" [cardId]="appModuleIdsEnum.Planets"></app-table>
+</app-card>
+<app-card>
+  <app-table [useControls]="false" [cardId]="appModuleIdsEnum.Race"></app-table>
+</app-card>

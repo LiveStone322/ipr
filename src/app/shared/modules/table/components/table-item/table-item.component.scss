@@ -1,0 +1,12 @@
+a {
+  cursor: pointer;
+  margin-left: 1em;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+a:not(input + a) {
+  padding-left: 1em;
+}

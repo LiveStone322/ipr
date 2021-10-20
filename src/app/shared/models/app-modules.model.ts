@@ -5,12 +5,13 @@ export interface AppLink {
 
 export enum AppModuleIds {
   Explorer = 'explorer',
+  CardExplorer = 'card-explorer',
+  Crew = 'crew',
   Movies = 'movies',
   Characters = 'characters',
   Ships = 'ships',
   Planets = 'planets',
   Race = 'race',
-  Crew = 'crew',
 }
 
 export enum AppModuleNames {

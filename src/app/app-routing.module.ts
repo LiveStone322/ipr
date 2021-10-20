@@ -13,8 +13,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/explorer/explorer.module').then((m) => m.ExplorerModule),
       },
+      {
+        path: AppModuleIds.CardExplorer + '/:entity/:id',
+        loadChildren: () =>
+          import('./modules/card-explorer/card-explorer.module').then((m) => m.CardExplorerModule),
+      },
     ],
   },
+
   {
     path: 'crew',
     loadChildren: () => import('./modules/crew/crew.module').then((m) => m.CrewModule),

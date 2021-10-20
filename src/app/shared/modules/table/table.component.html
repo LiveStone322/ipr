@@ -3,6 +3,17 @@
 <button (click)="onSortChanged(sortingOptions.Desc)">Desc</button>
 <ul>
   <li *ngFor="let item of shownItems">
-    <a [routerLink]="['./1']">{{ item }}</a>
+    <app-table-item
+      [useControls]="useControls"
+      [initialChecked]="isChecked(item)"
+      [data]="item"
+      (checkChanged)="onCheckChanged(item, $event)"
+      (selected)="onSelected(item)"
+    ></app-table-item>
   </li>
 </ul>
+<app-pagination-bar
+  [totalElements]="totalElements"
+  [paginationLength]="pageLength"
+  (pageChanged)="onPageChanged($event)"
+></app-pagination-bar>
